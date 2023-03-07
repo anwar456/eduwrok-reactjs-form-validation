@@ -71,7 +71,7 @@ export default class RegisterForm extends React.Component {
       );
     } else {
       alert(`
-        LOGIN BERHASIL
+        REGISTER BERHASIL
         =========================================\n
         Username : ${this.state.username}
         Email : ${this.state.email}
