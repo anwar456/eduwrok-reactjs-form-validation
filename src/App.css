@@ -1,38 +1,170 @@
-.App {
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  margin: auto;
+}
+
+.title {
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.errors {
   text-align: center;
+  background-color: red;
+  color: rgba(255, 255, 255, 0.8);
+  padding: 0.1rem 0.3rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  margin-bottom: 0.7rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.circle-one {
+  position: absolute;
+  top: -45px;
+  right: -45px;
+  z-index: 1;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-image: linear-gradient(45deg, #ffd800, #ff5520);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.circle-two {
+  position: absolute;
+  bottom: -45px;
+  left: -45px;
+  z-index: 1;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-image: linear-gradient(45deg, #0cbcf2, #750cf2);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.form-box {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  position: relative;
+  z-index: 999;
+  width: 100%;
+  padding: 30px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 16px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1), -4px -4px 10px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
 }
 
-.App-link {
-  color: #61dafb;
+.login-form-input {
+  width: 100%;
+  height: 50px;
+  margin: 10px auto;
+  padding: 15px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 25px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 1rem;
+  outline: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.login-form-input::placeholder {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.terms {
+  padding: 10px 20px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.8);
+  letter-spacing: 1px;
+  font-size: 0.875rem;
+  margin-right: 1rem;
+}
+
+.terms a {
+  color: rgba(255, 255, 255, 0.8);
+  text-transform: capitalize;
+}
+
+.terms a:hover {
+  opacity: 0.8;
+}
+
+.terms input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  height: 15px;
+  width: 15px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 3px;
+  cursor: pointer;
+  position: relative;
+  margin-right: 0.5rem;
+}
+
+.terms input[type="checkbox"]:checked {
+  background-color: #4070f4;
+}
+
+.terms input[type="checkbox"]::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 3.6px;
+  width: 4px;
+  height: 8px;
+  border: 2px solid transparent;
+  border-left: none;
+  border-top: none;
+  transform: rotate(45deg);
+}
+
+.terms input[type="checkbox"]:checked::before {
+  border-color: rgba(255, 255, 255, 0.8);
+}
+.login-form-btn {
+  width: 100%;
+  height: 50px;
+  margin: 20px auto 10px;
+  border: none;
+  border-radius: 25px;
+  background-color: #fff;
+  color: #3d3935;
+  font-size: 1.15rem;
+  text-transform: capitalize;
+  outline: none;
+  cursor: pointer;
+}
+
+.text {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  font-size: 0.875rem;
+  text-align: center;
+  margin-top: 1rem;
+  letter-spacing: 1px;
+}
+
+.text a {
+  text-transform: capitalize;
+  color: #fff;
+}
+
+.login-form-btn:hover,
+.text a:hover {
+  opacity: 0.8;
 }
